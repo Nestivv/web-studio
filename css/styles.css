@@ -17,12 +17,27 @@
   /* border colors */
   --header-line-color: #ececec;
   --card-border-color: #eeeeee;
+  --client-color: #afb1b8;
   /* grids variables */
   --vert-gap: 30px;
   --hor-gap: 30px;
   --num-items: 3;
 }
 /* //Common selectors */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 
 h1,
 h2,
@@ -53,9 +68,26 @@ img {
   margin-left: auto;
   margin-right: auto;
 }
+.section-title {
+  margin-bottom: 50px;
+
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.17;
+
+  text-align: center;
+
+  color: var(--secondary-text-color);
+}
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
+}
+.social {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
 }
 .set {
   display: flex;
@@ -139,6 +171,7 @@ img {
 }
 
 .nav-link {
+  display: inline-block;
   padding-top: 15px;
   padding-bottom: 15px;
 
@@ -157,14 +190,22 @@ img {
 }
 
 .contacts-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   padding-top: 15px;
   padding-bottom: 15px;
 
   color: var(--main-text-color);
+  fill: currentColor;
 }
 .contacts-link:hover,
 .contacts-link:focus {
   color: var(--accent-color);
+}
+.contacts-envelope,
+.contacts-phone {
+  fill: currentColor;
 }
 
 /* // Section hero */
@@ -177,8 +218,17 @@ img {
 
   padding-top: 200px;
   padding-bottom: 200px;
+  margin-left: auto;
+  margin-right: auto;
 
   background-color: var(--footer-background-color);
+  background-image: linear-gradient(to right, #2f303a40 0%, #2f303a40 100%),
+    url('../images/jpg/index/hero.jpg');
+
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover, cover;
+  max-width: 1600px;
+  background-position: left, center;
 }
 .hero-title {
   width: 696px;
@@ -209,6 +259,21 @@ img {
   background-color: var(--button-hover-color);
 }
 /* //Section features */
+.features-icon {
+  padding: 25px 100px;
+  margin-bottom: 30px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--secondary-background-color);
+}
+.icon {
+  /* background-size: contain; */
+  /* object-fit: cover; */
+  /* background-color: red; */
+}
 .features-list {
   --num-items: 4;
 }
@@ -225,45 +290,29 @@ img {
   padding-bottom: 94px;
 }
 
-.competency-title {
-  margin-bottom: 50px;
-  text-align: center;
-
-  font-size: 36px;
-  font-weight: 700;
-  line-height: 1.17;
-  color: var(--secondary-text-color);
-}
 /* // Section our team */
 .team {
   background-color: var(--secondary-background-color);
 }
-.team-title {
-margin-bottom: 50px;
 
-  font-size: 36px;
-  font-weight: 700;
-  line-height: 1.17;
-
-  text-align: center;
-
-  color: var(--secondary-text-color);
-} 
 .team-list {
   --num-items: 4;
 }
 .team-member {
-    text-align: center;
+  text-align: center;
 
   font-size: 16px;
   line-height: 1.17;
   text-align: center;
 
   background-color: var(--card-background-color);
+
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  box-shadow: 0px 2px 1px 0px #00000033, 0px 1px 1px 0px #00000024, 0px 1px 3px 0px #0000001f;
 }
 .member-description {
   padding: 30px 3px;
-  /* width: 270px; */
 }
 .member-name {
   margin-bottom: 10px;
@@ -274,8 +323,49 @@ margin-bottom: 50px;
 
   color: var(--secondary-text-color);
 }
+.member-position {
+  margin-bottom: 16px;
+}
+.team .social-link {
+  display: block;
+  padding: 12px;
+  fill: var(--client-color);
+}
+.team .social-link:hover,
+.team .social-link:focus {
+  fill: var(--white-color);
+  background-color: var(--accent-color);
+  border-radius: 50%;
+}
+.social-icon {
+  display: block;
+}
+/* //Section clients */
+.clients-list {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
 
+.clients-link {
+  display: inline-flex;
+  padding: 15px 31px;
+  border: 1px solid var(--client-color);
+  border-radius: 4px;
+  fill: var(--client-color);
+}
+
+.clients-link:hover,
+.clients-link:focus {
+  fill: var(--accent-color);
+  border-color: var(--accent-color);
+}
 /* //Footer */
+.footer-container {
+  display: flex;
+  gap: 70px;
+}
 
 .footer {
   padding-top: 60px;
@@ -312,6 +402,34 @@ margin-bottom: 50px;
 .address-link:focus {
   color: var(--accent-color);
 }
+/* // section join */
+.join {
+  padding-top: 12px;
+  width: 206px;
+}
+.join-title {
+  margin-bottom: 20px;
+
+  font-size: 14px;
+  text-transform: uppercase;
+  line-height: 1.17;
+
+  /* text-align: center; */
+
+  color: var(--white-color);
+}
+.join .social-link {
+  display: block;
+  padding: 12px;
+
+  fill: var(--white-color);
+  background-color: #ffffff10;
+  border-radius: 50%;
+}
+.join .social-link:hover,
+.join .social-link:focus {
+  background-color: var(--accent-color);
+}
 
 /* ?--------- Portfolio page-----------*/
 
@@ -337,8 +455,14 @@ margin-bottom: 50px;
 .filter-button:focus {
   background-color: var(--accent-color);
   color: var(--white-color);
+
+  box-shadow: 0px 2px 2px 0px #0000001f, 0px 1px 2px 0px #00000014, 0px 3px 1px 0px #0000001a;
 }
 /* //Section our works */
+.gallery-item:hover,
+.gallery-item:focus {
+  box-shadow: 1px 4px 6px 0px #00000029, 0px 4px 4px 0px #0000000f, 0px 1px 1px 0px #0000001f;
+}
 
 .project-description {
   padding: 20px 24px;
