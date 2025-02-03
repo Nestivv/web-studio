@@ -1,0 +1,38 @@
+.contacts {
+  display: flex;
+  gap: 50px;
+
+  &--transform {
+    flex-direction: column;
+    gap: 9px;
+  }
+}
+
+.contacts__link {
+  transition: color var(--animation-250ms), fill var(--animation-250ms);
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  fill: currentColor;
+
+  &--header-color {
+    color: var(--main-text-color);
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  &--footer-color {
+    color: var(--white-color-alpha);
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+.contacts__icon {
+  fill: currentColor;
+}

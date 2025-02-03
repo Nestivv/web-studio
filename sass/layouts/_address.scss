@@ -1,0 +1,9 @@
+.address {
+    font-style: inherit;
+
+    &__text {
+        margin-bottom: 9px;
+      
+        color: var(--white-color);
+      }
+  }

@@ -1,0 +1,38 @@
+// // Utils styles (block #1)
+@import "./utils/variables";
+@import "./utils/Visually-hidden";
+
+// // Base styles (Block #2)
+@import "./base/reset";
+@import "./base/base";
+@import "./base/section";
+@import "./base/container";
+
+// // Components styles (Block #3)
+@import "./components/logo";
+@import "./components/buttons";
+@import "./components/grid";
+@import "./components/social-links";
+@import "./components/confirmation";
+@import "./components/backdrop";
+
+// // Layout styles (Block #4)
+@import "./layouts/header";
+@import "./layouts/nav";
+@import "./layouts/contacts";
+
+@import "./layouts/hero";
+
+@import "./layouts/features";
+@import "./layouts/competency";
+@import "./layouts/team";
+@import "./layouts/clients";
+
+@import "./layouts/footer";
+@import "./layouts/address";
+@import "./layouts/join";
+@import "./layouts/subscribe";
+
+// ? page portfolio
+@import "./layouts/filter";
+@import "./layouts/project";

@@ -1,0 +1,10 @@
+.set {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: var(--hor-gap);
+    column-gap: var(--vert-gap);
+
+    &__item {
+        max-width: calc((100% - var(--vert-gap) * (var(--num-items) - 1)) / var(--num-items));
+      }
+  }

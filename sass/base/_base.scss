@@ -1,0 +1,27 @@
+.body {
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+  
+    background-color: var(--main-background-color);
+    color: var(--main-text-color);
+  }
+
+  .icon {
+    display: block;
+  }
+
+  .title {
+    font-size: 14px;
+    text-transform: uppercase;
+    line-height: 1.17;
+
+    &--white{
+      color: var(--white-color);
+    }
+    &--black{
+      color: var(--secondary-text-color);
+    }
+  }

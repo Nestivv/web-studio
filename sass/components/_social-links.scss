@@ -1,0 +1,33 @@
+.social {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .social__link {
+    transition: background-color var(--animation-250ms);
+  
+    display: block;
+    padding: 12px;
+    border-radius: 50%;
+  }
+  .social__link:hover,
+  .social__link:focus {
+    background-color: var(--accent-color);
+  }
+  
+  .social__link--team-color {
+    transition: fill var(--animation-250ms);
+  
+    fill: var(--client-color);
+  }
+  .social__link--team-color:hover,
+  .social__link--team-color:focus {
+    fill: var(--white-color);
+  }
+  
+  .social__link--join-color {
+    fill: var(--white-color);
+    background-color: #ffffff10;
+  }

@@ -1,0 +1,35 @@
+.confirmation{
+    display: flex;
+   justify-content: center;
+   align-items: center;
+
+    margin-bottom: 30px;
+    margin-top: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.confirmation__checkbox{
+    margin-right: 8px;
+}
+.confirmation__icon{
+    margin-right: 8px;
+}
+.confirmation__check{
+    opacity: 0;
+    transition: opacity var(--animation-250ms);
+}
+.confirmation__checkbox:checked + .confirmation__icon .confirmation__check{
+opacity: 1;
+}
+.confirmation__checkbox:checked + .confirmation__icon .confirmation__uncheck{
+    opacity: 0;
+    }
+.confirmation__text{
+user-select: none;
+}
+
+.confirmation__link{
+    color: var(--accent-color);
+    text-decoration: underline;
+    text-underline-position: under;
+}

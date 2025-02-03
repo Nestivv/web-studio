@@ -1,0 +1,35 @@
+.team {
+  background-color: var(--secondary-background-color);
+}
+
+.team__list {
+  --num-items: 4;
+}
+.team__member {
+  text-align: center;
+
+  font-size: 16px;
+  line-height: 1.17;
+  text-align: center;
+
+  background-color: var(--card-background-color);
+
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  box-shadow: 0px 2px 1px 0px #00000033, 0px 1px 1px 0px #00000024, 0px 1px 3px 0px #0000001f;
+}
+.team__description {
+  padding: 30px 3px;
+}
+.team__name {
+  margin-bottom: 10px;
+  text-align: center;
+
+  font-weight: 500;
+  font-size: inherit;
+
+  color: var(--secondary-text-color);
+}
+.team__position {
+  margin-bottom: 16px;
+}

@@ -1,0 +1,51 @@
+.hero {
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+    padding-top: 200px;
+    padding-bottom: 200px;
+    margin-left: auto;
+    margin-right: auto;
+  
+    background-color: var(--footer-background-color);
+    background-image: linear-gradient(to right, #2f303a40 0%, #2f303a40 100%),
+      url('../images/jpg/index/hero.jpg');
+  
+    background-repeat: no-repeat, no-repeat;
+    background-size: cover, cover;
+    max-width: 1600px;
+    background-position: left, center;
+  }
+  
+  .hero__title {
+    width: 696px;
+  
+    font-size: 44px;
+    font-weight: 900;
+    line-height: 1.36;
+    letter-spacing: 0.06em;
+  
+    color: var(--white-color);
+    text-transform: uppercase;
+  
+    text-align: center;
+    animation: fade-in 3000ms ease 200ms 1 forwards;
+  }
+  
+  @keyframes fade-in {
+      from {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  
+  .hero__button {
+    padding: 10px 32px;
+  }
